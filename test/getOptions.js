@@ -391,7 +391,7 @@ const testJenkins = (sut, done) => {
   process.env.BUILD_ID = '1234';
   process.env.GIT_COMMIT = 'a12s2d3df4f435g45g45g67h5g6';
   process.env.GIT_BRANCH = 'master';
-
+  process.env.BUILD_TAG = 'jenkins-job-1234';
   const git = {
     head: {
       id: 'a12s2d3df4f435g45g45g67h5g6',
@@ -409,6 +409,7 @@ const testJenkins = (sut, done) => {
     should.not.exist(err);
     options.service_name.should.equal('jenkins');
     options.service_job_id.should.equal('1234');
+    options.service_number.should.equal('jenkins-job-1234');
     options.git.should.eql(git);
     done();
   });
