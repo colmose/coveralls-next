@@ -46,11 +46,11 @@
     "test": "npm run lint && npm run mocha"
   },
   "dependencies": {
-    "got": "11.8.2",
     "js-yaml": "4.1.0",
     "lcov-parse": "1.0.0",
     "log-driver": "1.2.7",
-    "minimist": "1.2.5"
+    "minimist": "1.2.5",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "eslint": "7.27.0",
